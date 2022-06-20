@@ -1,0 +1,17 @@
+instalar react pelo vite na pasta anterior com o comando:
+> npm create vite@latest
+seleciona o nome do projeto e seleciona react com type script
+
+entra no diretório e executar o comando no terminal:
+>npm install
+
+instalar as dependências do projeto com o npm:
+>npm i tailwindcss postcss autoprefixer -D
+
+inicializar o arquivo do postcss:
+>npx tailwindcss init -p
+
+configurar o tailswind.config.js, substituir o content
+     content: [
+    './src/**/*.tsx'
+    ],

@@ -12,6 +12,17 @@ inicializar o arquivo do postcss:
 >npx tailwindcss init -p
 
 configurar o tailswind.config.js, substituir o content
-     content: [
-    './src/**/*.tsx'
-    ],
+content: [
+'./src/**/*.tsx'
+],
+
+instalar extensões no vscode:
+GraphQl
+Tailwind CSS IntelliSense
+PostCSS Language Support
+
+criar cms
+app.graphcms.com
+
+clonar dados graphcms
+https://rseat.in/lab-graphcms

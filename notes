@@ -21,8 +21,20 @@ GraphQl
 Tailwind CSS IntelliSense
 PostCSS Language Support
 
-criar cms
-app.graphcms.com
+criar conta graphcms
+httpa://graphcms.com
 
-clonar dados graphcms
+*clonar dados graphcms
 https://rseat.in/lab-graphcms
+
+notas graphcms
+query = buscar dados
+mutation = criar, alterar ou deletar dados
+
+instalar apollo eo graph Ql ( controle de requisição )
+>npm i @apollo/client graphql
+
+para usar useQuery do apollo colocar o componente App do arquivo main.tsx dentro do componenete <ApolloProvider client={client}>
+    <App />
+</ApolloProvider>
+client importado da lib apollo

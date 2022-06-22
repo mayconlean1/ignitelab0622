@@ -34,7 +34,24 @@ mutation = criar, alterar ou deletar dados
 instalar apollo eo graph Ql ( controle de requisição )
 >npm i @apollo/client graphql
 
-para usar useQuery do apollo colocar o componente App do arquivo main.tsx dentro do componenete <ApolloProvider client={client}>
+para usar useQuery do apollo colocar o componente App do arquivo main.tsx dentro do componenete 
+<ApolloProvider client={client}>
     <App />
 </ApolloProvider>
 client importado da lib apollo
+
+svg converter para o jsx
+https://svg2jsx.com/
+
+customização de cores tailwindcss
+https://tailwindcss.com/docs/customizing-colors
+editar o tailwind.config.js e adicionar as cores que serão usadas
+
+biblioteca de icones com suporte em react
+https://phosphoricons.com/
+>npm i phosphor-react
+
+biblioteca para lidar com datas
+https://date-fns.org/v2.28.0/docs/format
+>npm i date-fns
+funçao format do date-fns usar aspas dupla no segundo parametro e aspas simples para caracteres

@@ -58,11 +58,12 @@ funçao format do date-fns usar aspas dupla no segundo parametro e aspas simples
 
 instalar package vimejs
 >npm i @vime/core @vime/react --force
-*--force por nao ter suporte a versão do react *causa comfilto na instalaçao dos pacotes*
+*--force por nao ter suporte a versão do react 
+@vime/react --force *causa comfilto na instalaçao dos pacotes*
 
 ****Desafio responsivo
 
 biblioteca para roteamento react
 >npm i react-router-dom
 
-***Desafio video na rota /lessons
+***Desafio video na rota /lessons __ok

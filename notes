@@ -55,3 +55,14 @@ biblioteca para lidar com datas
 https://date-fns.org/v2.28.0/docs/format
 >npm i date-fns
 funçao format do date-fns usar aspas dupla no segundo parametro e aspas simples para caracteres
+
+instalar package vimejs
+>npm i @vime/core @vime/react --force
+*--force por nao ter suporte a versão do react *causa comfilto na instalaçao dos pacotes*
+
+****Desafio responsivo
+
+biblioteca para roteamento react
+>npm i react-router-dom
+
+***Desafio video na rota /lessons

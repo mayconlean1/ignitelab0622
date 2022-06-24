@@ -5,7 +5,6 @@ import { Video } from "../components/Video";
 
 export function Platform (){
     const {slug} = useParams<{slug : string}>()
-    console.log('slug :>> ', slug);
     return(
         <div className="flex flex-col min-h-screen">
             <Header />

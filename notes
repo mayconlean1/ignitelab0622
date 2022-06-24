@@ -67,3 +67,14 @@ biblioteca para roteamento react
 >npm i react-router-dom
 
 ***Desafio video na rota /lessons __ok
+
+nas configuraçoes do graphcms precisa liberar as mutations para serem feitas pelo app
+Nas configurações entrar em API ACESS criar e criar um token
+Desabilitar as criações de tabelas em management permissions
+e adicionar as permissões que poderão ser modificadas
+
+useMutation retorna um array na primeira posiçao uma funçao para ser usada posteriormente e na segunda posiçao um objeto com os dados de retorno
+
+liberar no graphcms a leitura do draft da tabela subscriber para corrigir o erro
+
+>npm i classnames

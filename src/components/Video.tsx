@@ -54,7 +54,6 @@ export function Video (props: VideoProps){
         )
     }
 
-    console.log ('VIDEO' ,props.lessonSlug,data.lesson.videoId )
 
     return(
         <div className="flex-1">

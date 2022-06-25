@@ -9,9 +9,14 @@ interface LessonProps{
     title: string;
     slug: string;
     availableAt: Date;
-    type: 'live' | 'class'}
+    type: 'live' | 'class'
+    stateToogleList: [boolean, (newState:boolean)=>void]
+}
+    
 
 export function Lesson (props: LessonProps){
+    const [toogleState, setToogleList] = props.stateToogleList
+
     const {slug} = useParams<{slug: string}>()
 
     const isLessonAvailable = isPast(props.availableAt);
@@ -19,9 +24,11 @@ export function Lesson (props: LessonProps){
 
     const isActiveLesson = slug === props.slug
 
+    function toogleScreen (){
+        setToogleList(!toogleState)
+    }
     
     const navigate = useNavigate()
-
     useEffect(()=>{
         const checkedSlug = slug === undefined
         if (checkedSlug){
@@ -31,7 +38,7 @@ export function Lesson (props: LessonProps){
     },[])
 
     return(
-       <Link to={`/event/lesson/${props.slug}`} className='group'>
+       <Link to={`/event/lesson/${props.slug}`}  className='group' onClick={toogleScreen}>
         <span className="text-gray-300">
             {availableDateFormated}
         </span>

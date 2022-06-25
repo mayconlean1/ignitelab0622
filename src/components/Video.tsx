@@ -1,15 +1,17 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
-import { gql, useQuery } from "@apollo/client";
 
 import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 interface VideoProps{
-    lessonSlug: string;
+    lessonSlug: string
+    stateToogleList: [boolean, (newState:boolean)=>void]
 }
-
+  
 export function Video (props: VideoProps){
+    const [toogleState, setToogleList] = props.stateToogleList 
+
     const { data } = useGetLessonBySlugQuery({
         variables:{
             slug: props.lessonSlug
@@ -25,9 +27,8 @@ export function Video (props: VideoProps){
         )
     }
 
-
     return(
-        <div className="flex-1">
+        <div className={`${toogleState? '':'smmax750:hidden'} flex-1`}>
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
@@ -39,7 +40,7 @@ export function Video (props: VideoProps){
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16">
+                <div className="flex smmax650:flex-col items-start gap-16">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
@@ -77,7 +78,7 @@ export function Video (props: VideoProps){
                         </div>
                     </div>
                 </div>
-                <div className="gap-8 mt-20 grid grid-cols-2">
+                <div className="gap-8 mt-20 grid grid-cols-2 smmax750:flex smmax750:flex-col">
                     <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-600 h-full p-6 flex items-center">
                             <FileArrowDown size={40}/>

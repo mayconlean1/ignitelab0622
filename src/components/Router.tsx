@@ -6,8 +6,11 @@ export function Router(){
     return(
         <Routes>
             <Route path='/' element={<Subscribe/>} />
-            <Route path='/event' element={<Platform />} />
-            <Route path='/event/lesson/:slug' element={<Platform />} />
+            
+
+                <Route path='/event' element={<Platform />} />
+                <Route path='/event/lesson/:slug' element={<Platform />} />
+            
         </Routes>
         )
 }

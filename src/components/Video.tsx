@@ -30,7 +30,7 @@ export function Video (props: VideoProps){
     return(
         <div className={`${toogleState? '':'smmax750:hidden'} flex-1`}>
             <div className="bg-black flex justify-center">
-                <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+                <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video lg:max-w-none">
                     <Player>
                         <Youtube videoId={data.lesson.videoId}/>
                         <DefaultUi />
@@ -39,9 +39,9 @@ export function Video (props: VideoProps){
                 </div>
             </div>
 
-            <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex smmax650:flex-col items-start gap-16">
-                    <div className="flex-1">
+            <div className="p-8 max-w-[1100px] mx-auto lg:max-w-none " >
+                <div className="flex lg:flex-col lg:justify-center text-center items-start gap-16">
+                    <div className="flex-1 smmax650:text-center smmax650:justify-center ">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
                         </h1>
@@ -50,7 +50,7 @@ export function Video (props: VideoProps){
                         </p>
 
                         {data.lesson.teacher && (
-                            <div className="flex items-center gap-4 mt-6">
+                            <div className="flex items-center gap-4 mt-6 lg:justify-center lg:text-center">
                                 <img 
                                     className="h-16 w-16 rounded-full border-2 border-blue-500"
                                     src={data.lesson.teacher.avatarURL} 
@@ -64,7 +64,7 @@ export function Video (props: VideoProps){
                             </div>
                         )}
                     </div>
-                    <div>
+                    <div className="lg:w-full">
                         <div className="flex flex-col gap-4">
                             <a href="" className="p-4 text-small bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                                 <DiscordLogo size={24}/>

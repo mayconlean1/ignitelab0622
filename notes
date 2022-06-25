@@ -78,6 +78,23 @@ https://www.graphql-code-generator.com/
 >npm install @graphql-codegen/typescript -D
 >npm install @graphql-codegen/typescript-operations -D
 >npm install @graphql-codegen/cli -D
+*Todas querys e mutations dentro do arquivo .graphql deve ser ter nome
+nocodege.yml:
+*
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
+*
+adicionar ao package.json aos scripts e executar
+"codegen": "graphql-codegen"
 
 
 *******instalar package vimejs ***********************

@@ -18,7 +18,6 @@ export function Subscribe(){
 
     const [createSubscriber, {loading}] = useMutation(CREATE_SUBSCRIBER_MUTATION)
 
-
     async function handleSubscibe(event: FormEvent){
         event.preventDefault()
 
@@ -28,7 +27,6 @@ export function Subscribe(){
                 email
             }
         })
-
         navigate('/event')
     }
 

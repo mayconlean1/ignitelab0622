@@ -2,7 +2,8 @@ instalar react pelo vite na pasta anterior com o comando:
 > npm create vite@latest
 seleciona o nome do projeto e seleciona react com type script
 
-entra no diretório e executar o comando no terminal:
+entra no diretório criadocd e executar o comando no terminal:
+>cd /DIRETÓRIO_CRIADO_VITE
 >npm install
 
 instalar as dependências do projeto com o npm:
@@ -56,17 +57,9 @@ https://date-fns.org/v2.28.0/docs/format
 >npm i date-fns
 funçao format do date-fns usar aspas dupla no segundo parametro e aspas simples para caracteres
 
-instalar package vimejs
->npm i @vime/core @vime/react --force
-*--force por nao ter suporte a versão do react 
-@vime/react --force *causa comfilto na instalaçao dos pacotes*
-
-****Desafio responsivo
-
 biblioteca para roteamento react
 >npm i react-router-dom
 
-***Desafio video na rota /lessons __ok
 
 nas configuraçoes do graphcms precisa liberar as mutations para serem feitas pelo app
 Nas configurações entrar em API ACESS criar e criar um token
@@ -78,3 +71,21 @@ useMutation retorna um array na primeira posiçao uma funçao para ser usada pos
 liberar no graphcms a leitura do draft da tabela subscriber para corrigir o erro
 
 >npm i classnames
+
+grapgql code generator - gerar o typescript e o types do graphql
+https://www.graphql-code-generator.com/
+>npm install @graphql-codegen/typescript-react-apollo -D
+>npm install @graphql-codegen/typescript -D
+>npm install @graphql-codegen/typescript-operations -D
+>npm install @graphql-codegen/cli -D
+
+
+*******instalar package vimejs ***********************
+>npm i @vime/core @vime/react --force
+*--force por nao ter suporte a versão do react 
+@vime/react --force *causa comfilto na instalaçao dos pacotes*
+
+
+****Desafio responsivo
+***Desafio video na rota /lessons __ok
+***Defasio autentiçao login

@@ -5,7 +5,7 @@ import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
 
 export function Platform (){
-    const stateToogleList = useState(false)
+    const stateToogleList = useState(true)
     
     const {slug} = useParams<{slug : string}>()
 

@@ -39,7 +39,7 @@ export function Lesson (props: LessonProps){
 
     return(
        <Link to={`/event/lesson/${props.slug}`}  className='group' onClick={toogleScreen}>
-        <span className="text-gray-300">
+        <span className="text-gray-300 smmax450:text-base">
             {availableDateFormated}
         </span>
         <div className={classNames(`rounded border border-gray-500 p-4 mt-2  group-hover:border-green-500`,{
@@ -57,7 +57,7 @@ export function Lesson (props: LessonProps){
                         Conteúdo liberado
                     </span>
                 ):(
-                    <span className="text-sm text-orange-500 font-medium flex items-center gap-2">
+                    <span className="-base text-sm text-orange-500 font-medium flex items-center gap-2">
                         <Lock size={20}/>
                         Em breve
                     </span>
@@ -72,7 +72,7 @@ export function Lesson (props: LessonProps){
 
             </header>
 
-            <strong className={classNames(' mt-5 block',{
+            <strong className={classNames('smmax450:text-base mt-5 block',{
                 'text-white': isActiveLesson,
                 'text-gray-200': !isActiveLesson
             })}>

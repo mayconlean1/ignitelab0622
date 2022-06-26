@@ -30,7 +30,7 @@ export function Video (props: VideoProps){
     return(
         <div className={`${toogleState? '':'smmax750:hidden'} flex-1`}>
             <div className="bg-black flex justify-center">
-                <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video lg:max-w-none">
+                <div className="h-full w-full max-w-[1100px]  min450:max-h-[60vh] aspect-video ">
                     <Player>
                         <Youtube videoId={data.lesson.videoId}/>
                         <DefaultUi />
@@ -39,9 +39,9 @@ export function Video (props: VideoProps){
                 </div>
             </div>
 
-            <div className="p-8 max-w-[1100px] mx-auto lg:max-w-none " >
-                <div className="flex lg:flex-col lg:justify-center text-center items-start gap-16">
-                    <div className="flex-1 smmax650:text-center smmax650:justify-center ">
+            <div className="min450:p-8 p-4 max-w-[1100px] mx-auto  smmax450:text-xs " >
+                <div className="flex lg:flex-col items-start gap-16">
+                    <div className="flex-1  ">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
                         </h1>
@@ -50,7 +50,7 @@ export function Video (props: VideoProps){
                         </p>
 
                         {data.lesson.teacher && (
-                            <div className="flex items-center gap-4 mt-6 lg:justify-center lg:text-center">
+                            <div className="flex items-center gap-4 mt-6 ">
                                 <img 
                                     className="h-16 w-16 rounded-full border-2 border-blue-500"
                                     src={data.lesson.teacher.avatarURL} 
@@ -58,8 +58,8 @@ export function Video (props: VideoProps){
                                 />
                                 
                                 <div className="leading-relaxed">
-                                    <strong className="font-bold text-2xl block">{data.lesson.teacher.name}</strong>
-                                    <span className="text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
+                                    <strong className="smmax450:text-lg font-bold text-2xl block">{data.lesson.teacher.name}</strong>
+                                    <span className="smmax450:text-xs text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
                                 </div>
                             </div>
                         )}
@@ -84,9 +84,9 @@ export function Video (props: VideoProps){
                             <FileArrowDown size={40}/>
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Material Complementar </strong>
-                            <p className="text-sm text-gray-200 mt-2">
-                                Acesse o mateiral complementar ppara acelerar o seu desenvolvimento
+                            <strong className="text-2xl smmax450:text-lg">Material Complementar </strong>
+                            <p className="text-sm smmax450:text-xs text-gray-200 mt-2">
+                                Acesse o mateiral complementar para acelerar o seu desenvolvimento
                             </p>
                         </div>
                         <div className="h-full p-6 flex items-center">
@@ -99,8 +99,8 @@ export function Video (props: VideoProps){
                             <FileArrowDown size={40}/>
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Wallpapers exclusivos </strong>
-                            <p className="text-sm text-gray-200 mt-2">
+                            <strong className="text-2xl smmax450:text-lg">Wallpapers exclusivos </strong>
+                            <p className="text-sm smmax450:text-xs text-gray-200 mt-2">
                                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
                             </p>
                         </div>

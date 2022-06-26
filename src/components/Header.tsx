@@ -1,4 +1,4 @@
-import { List } from "phosphor-react";
+import { List, X } from "phosphor-react";
 import { Logo } from "./Icon";
 import {toogleContextProvider} from '../contexts/toggleListContext'
 
@@ -23,7 +23,7 @@ export function Header (props:HeaderProps){
                     
             >
                 Aulas 
-                <List size={24}/>
+                 {toogleState?<List color='#81D8F7' size={32}/> :<X color='#81D8F7' size={32}/> } 
             </div>
         </header>
         

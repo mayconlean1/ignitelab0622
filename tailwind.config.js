@@ -19,7 +19,8 @@ module.exports = {
       'smmax750': {'max': '750px'},
       'sm': '750px',
       'smmax650' : {'max': '650px'},
-      'smmax450' : {'max':'450px'}
+      'smmax450' : {'max':'450px'},
+      'min450' : '450px'
 
     },
 

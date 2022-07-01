@@ -22,13 +22,22 @@ export function Subscribe(){
     async function handleSubscibe(event: FormEvent){
         event.preventDefault()
 
-        await createSubscriber({
-            variables:{
-                name,
-                email
-            }
-        })
-        navigate('/event')
+        try {
+            await createSubscriber({
+                variables:{
+                    name,
+                    email
+                }
+            })
+            const backendCreateToken = import.meta.env.VITE_BACKEND_URL +'/createtoken'
+            const res = await axios.post(backendCreateToken,{name})
+            localStorage.setItem('token', res.data.token )
+
+            navigate('/event')
+        } catch (error) {
+            console.log(error);
+        }
+   
     }
 
     useEffect(() => {

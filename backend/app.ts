@@ -31,7 +31,6 @@ app.post ('/authenticate' , async (req ,res) => {
     const {code} : {code:string} = req.body
     const url = 'https://github.com/login/oauth/access_token'
 
-   
     let error = false
     let response1 
     try {
@@ -72,7 +71,7 @@ app.post ('/authenticate' , async (req ,res) => {
                     id: response2.data.id
                     },
                     process.env.JWT_SECRET || '',
-                    {expiresIn:'10m'}
+                    {expiresIn:'1d'}
                 ) 
                 return res.json({token})
 
@@ -86,11 +85,19 @@ app.post ('/authenticate' , async (req ,res) => {
 
         return res.status(401).json({token:false})
     }
-
-    
-    
 })
 
+app.post('/createtoken', (req, res) => {
+    const name = req.body.name
+    const token : string = sign({
+        id: name
+        },
+        process.env.JWT_SECRET || '',
+        {expiresIn:'5m'}
+    )
+    return res.json({token})
+
+})
 
 app.post('/verifyToken', (req, res) => {
     const token : string = req.body.token

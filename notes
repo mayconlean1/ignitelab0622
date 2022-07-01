@@ -79,7 +79,7 @@ https://www.graphql-code-generator.com/
 >npm install @graphql-codegen/typescript-operations -D
 >npm install @graphql-codegen/cli -D
 *Todas querys e mutations dentro do arquivo .graphql deve ser ter nome
-nocodege.yml:
+codegen.yml:
 *
 generates:
   ./src/graphql/generated.ts:
@@ -106,6 +106,8 @@ e executar
 @vime/react --force *causa comfilto na instalaçao dos pacotes*
 
 
-****Desafio responsivo
+****Desafio responsivo __ok
 ***Desafio video na rota /lessons __ok
 ***Defasio autentiçao login
+
+>npm install --save-dev @types/react@latest @types/react-dom@latest

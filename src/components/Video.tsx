@@ -1,7 +1,6 @@
-import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import ReactPlayer from "react-player";
 
-import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 interface VideoProps{
@@ -31,10 +30,8 @@ export function Video (props: VideoProps){
         <div className={`${toogleState? '':'smmax750:hidden'} flex-1`}>
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px]  min450:max-h-[60vh] aspect-video ">
-                    <Player>
-                        <Youtube videoId={data.lesson.videoId}/>
-                        <DefaultUi />
-                    </Player>
+
+                <ReactPlayer url={`https://www.youtube.com/watch?v=${data.lesson.videoId}`} width='100%' height='100%'/>
 
                 </div>
             </div>

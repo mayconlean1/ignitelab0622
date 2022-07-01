@@ -3,7 +3,6 @@ import {format, isPast} from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR'
 import { Link,  useNavigate, useParams } from 'react-router-dom';
 import classNames from 'classnames'
-import { useEffect } from 'react';
 
 interface LessonProps{
     title: string;
@@ -27,15 +26,6 @@ export function Lesson (props: LessonProps){
     function toogleScreen (){
         setToogleList(!toogleState)
     }
-    
-    const navigate = useNavigate()
-    useEffect(()=>{
-        const checkedSlug = slug === undefined
-        if (checkedSlug){
-            console.log(checkedSlug) 
-            navigate('/event/lesson/abertura')
-        }
-    },[])
 
     return(
        <Link to={`/event/lesson/${props.slug}`}  className='group' onClick={toogleScreen}>

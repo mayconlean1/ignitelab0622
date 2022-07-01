@@ -1,9 +1,11 @@
 import { gql, useMutation } from "@apollo/client";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Icon";
 import {IconReact} from "../components/IconReact"
 import { useCreateSubscriberMutation } from "../graphql/generated";
+import axios from 'axios'
+import { GithubLogo } from "phosphor-react";
 
 export function Subscribe(){
     const navigate = useNavigate()
@@ -12,6 +14,10 @@ export function Subscribe(){
     const [email, setEmail] = useState('')
 
     const [createSubscriber, {loading}] = useCreateSubscriberMutation()
+
+    function loginGithub(){
+        window.location.href = 'http://localhost:3001/github_authorize'
+    }
 
     async function handleSubscibe(event: FormEvent){
         event.preventDefault()
@@ -24,6 +30,12 @@ export function Subscribe(){
         })
         navigate('/event')
     }
+
+    useEffect(() => {
+        if(localStorage.getItem('token') !== ''){
+            navigate('/event')
+        }
+    })
 
     return (
         <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
@@ -67,6 +79,13 @@ export function Subscribe(){
                             className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
                         >
                             Garantir minha vaga
+                        </button>
+                        <button 
+                            type="button"
+                            onClick={loginGithub}
+                            className="mt-4 text-black bg-gray-200 uppercase py-4 rounded font-bold text-sm hover:bg-blue-500 transition-colors disabled:opacity-50 flex item-center justify-center gap-1 border-blue-500 border-2"
+                        >
+                            <GithubLogo size={24} /> Entrar com github
                         </button>
 
                     </form>
